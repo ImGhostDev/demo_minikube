@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: demo-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: demo
@@ -11,6 +11,7 @@ spec:
     metadata:
       labels:
         app: demo
+        version: 1.0
     spec:
       containers:
         - name: demo-container
